@@ -1,25 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat_angry0000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HC7-Kz-9PO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfL-QJ-isC">
+                                <rect key="frame" x="254" y="347" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="53K-t2-7ee"/>
+                                </constraints>
+                                <state key="normal" image="fart.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y7A-vT-jHd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-RQ-OMa">
+                                <rect key="frame" x="16" y="347" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QoS-k7-vjH"/>
+                                </constraints>
+                                <state key="normal" image="cynbals.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="unn-5G-KMK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VfL-QJ-isC" secondAttribute="trailing" constant="16" id="3cN-MY-Bz7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HC7-Kz-9PO" secondAttribute="bottom" id="7Xk-zX-iOk"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9dp-RQ-OMa" secondAttribute="bottom" constant="171" id="MaP-DY-s5H"/>
+                            <constraint firstAttribute="trailing" secondItem="HC7-Kz-9PO" secondAttribute="trailing" id="OOu-dA-Bmn"/>
+                            <constraint firstItem="HC7-Kz-9PO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Raa-on-STF"/>
+                            <constraint firstItem="9dp-RQ-OMa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="bV7-fR-iPD"/>
+                            <constraint firstItem="9dp-RQ-OMa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="327" id="g7k-e9-SzS"/>
+                            <constraint firstItem="VfL-QJ-isC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="327" id="m36-pW-ZaC"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VfL-QJ-isC" secondAttribute="bottom" constant="171" id="nMr-hC-ZIz"/>
+                            <constraint firstItem="HC7-Kz-9PO" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="xe8-xM-RkV"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bgview" destination="HC7-Kz-9PO" id="iwu-IR-EKi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat_angry0000.jpg" width="640" height="1024"/>
+        <image name="cynbals.png" width="60" height="60"/>
+        <image name="fart.png" width="60" height="60"/>
+    </resources>
 </document>
